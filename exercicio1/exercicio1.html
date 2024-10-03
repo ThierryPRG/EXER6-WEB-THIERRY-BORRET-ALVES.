@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seu Nome</h1>
+    <input type="text" id="nome" placeholder="Nome aqui">
+    <button onclick="mostrarMensagem()">Enviar</button>
+    <p id="mensagem"></p>
+
+    <script>
+        function mostrarMensagem() {
+            var nome = document.getElementById('nome').value;
+            document.getElementById('mensagem').innerText = nome === '' ? 'Por Favor, insira seu nome.' : 'Olá, ' + nome + '!';
+        }
+    </script>
+</body>
+</html>
